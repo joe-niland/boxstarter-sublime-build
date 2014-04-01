@@ -1,0 +1,6 @@
+{
+   "cmd": ["powershell", "-Command", "& {\\$packageDir = Get-Item (Join-Path (Get-Location).Path '..\\'); Invoke-BoxStarterBuild -name \\$packageDir.Name}"],
+   "shell": true,
+   "selector": ["source.powershell"],
+   "working_dir": "$file_path"
+}
