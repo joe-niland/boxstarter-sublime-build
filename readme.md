@@ -1,13 +1,18 @@
 # Sublime Build System for BoxStarter
 
 ## Installation
-1. Copy boxstarter.sublime-build to %APPDATA%\Sublime Text 3\Data\Packages\User\
 
-   Now when you look in the **Tools -> Build System** menu, you'll see a **BoxStarter** entry.
+Copy boxstarter.sublime-build to:
+
++ Standard Sublime Text 3 Installation: `%APPDATA%\Sublime Text 3\Data\Packages\User\`
++ Standard Sublime Text 2 Installation: `%APPDATA%\Sublime Text 2\Packages\User\`
++ Portable Sublime Text 3 Installation: `ST3_PORTABLE_LOCATION\Data\Packages\User\`
+
+Now when you look in the **Tools -> Build System** menu, you'll see a **BoxStarter** entry.
 
 ## Usage
-The build system file has been configured to be auto-selected when working on files with extension **.ps1**.
-If you are OK with that, simply open your ChocolateyInstall.ps1 file from withih your BoxStart package's tools directory and hit **Ctrl-B**.
+The build system file has been configured to be auto-selected when working on Powershell files (thos with extension **.ps1**, **.psm1**, etc.
+If you are OK with that, simply open your **ChocolateyInstall.ps1** file from within your BoxStarter package's **tools** directory and hit **Ctrl-B**.
 
 If you already have a build system in place for **.ps1** file select **Tools -> Build System -> BoxStarter** to manually enable the build system. As above, using the keyboard shortcut **Ctrl-B** will build your package.
 
@@ -17,11 +22,11 @@ BoxStarter will place the built package in your chosen Local Repository location
 
 You can view the current BoxStart config with the command:
 
-   Get-BoxStarterConfig
+    Get-BoxStarterConfig
 
 You can change this location from within Powershell/BoxStarter Shell with the command:
    
-   Set-BoxStarterConfig -LocalRepo YOUR_REPO_PATH
+    Set-BoxStarterConfig -LocalRepo YOUR_REPO_PATH
 
 More info here: http://boxstarter.org/UsingBoxstarter
 
